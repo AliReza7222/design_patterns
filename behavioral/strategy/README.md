@@ -2,7 +2,7 @@
 
 ## 📘 Definition
 The **Strategy Pattern** defines a family of algorithms, encapsulates each one, and makes them interchangeable. This pattern allows the algorithm to vary independently from the clients that use it, providing flexibility and modularity.
-Take the parts that vary and encapsulate them, so that later you can alter or extend the parts that vary without affecting those that don’t.
+**_Take the parts that vary and encapsulate them, so that later you can alter or extend the parts that vary without affecting those that don’t._**
 
 ## ✨ Key Features
 - **Encapsulation of Algorithms**: Strategy Pattern enables you to encapsulate a family of algorithms into individual classes, each implementing a particular behavior or algorithm.
