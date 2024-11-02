@@ -32,6 +32,16 @@ The Observer Pattern allows an object (the *subject*) to notify multiple depende
 
 ---
 
+## ➡️ Push and Pull in the Observer Pattern
+
+The Observer Pattern can support *push* and *pull* models, adding flexibility to how data is shared with observers:
+
+- **Push Model**: In the push model, the subject sends data directly to observers when it notifies them. This approach is more proactive, as the subject determines what information observers need and sends it with each notification. It's efficient when observers need specific data immediately.
+
+- **Pull Model**: In the pull model, the subject only notifies observers of a change, but it’s up to each observer to retrieve the necessary data from the subject. This approach allows observers to pull the exact data they need, but it may introduce a slight delay as observers query the subject.
+
+Combining both models is also possible, enabling observers to choose whether they want data directly pushed to them or to pull it as needed. This dual approach provides flexibility based on observer requirements and system design.
+
 ## 🔄 Similarity to the Publish/Subscribe Pattern
 
 The Observer Pattern is often compared to the *Publish/Subscribe* (or *Pub/Sub*) pattern, as both facilitate communication between objects. Here are some key similarities and differences:
@@ -40,7 +50,13 @@ The Observer Pattern is often compared to the *Publish/Subscribe* (or *Pub/Sub*)
 
 - **Similarities**: Both patterns allow multiple components to receive updates based on events. In both patterns, components register their interest to be notified of specific changes.
 
-- **Differences**: In the Observer Pattern, observers are directly linked to the subject, making it suitable for cases where the subject needs to notify specific observers directly.
-In contrast, Publish/Subscribe introduces a messaging broker or event bus to decouple publishers and subscribers further.
-The observer pattern is mostly implemented synchronously, i.e. the Subject calls the appropriate method of all its observers when an event occurs. The publisher-subscriber pattern is mostly implemented asynchronously (using a message queue).
-This makes Pub/Sub more scalable and ideal for distributed systems, while the Observer Pattern is often used within a single application.
+- **Differences**:
+  - In the Observer Pattern, observers are directly linked to the subject. This direct connection makes it suitable for scenarios where the subject needs to notify specific observers directly.
+
+  - In contrast, the Publish/Subscribe pattern introduces a messaging broker or event bus. This addition further decouples publishers and subscribers, allowing for greater flexibility.
+
+  - The Observer Pattern is typically implemented synchronously. This means that when an event occurs, the subject directly calls the appropriate method of all its observers.
+
+  - On the other hand, the Publish/Subscribe pattern is often implemented asynchronously, often using a message queue. This allows subscribers to receive updates independently from the publisher.
+
+  - As a result, the Publish/Subscribe pattern is more scalable and is ideal for distributed systems. In contrast, the Observer Pattern is generally used within a single application.
