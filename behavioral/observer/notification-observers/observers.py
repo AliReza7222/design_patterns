@@ -4,7 +4,7 @@ from base.subjects import Subject
 
 class ConcreteObserver(Observer):
     def notification(self, message: str):
-        print("{observer}: {message}".format(observer=self, message=message))
+        return "{observer}: {message}".format(observer=self, message=message)
 
     def get_data(self, subject: Subject):
         data = subject.pull_data()

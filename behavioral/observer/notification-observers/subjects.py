@@ -25,7 +25,7 @@ class Data(Subject):
     def notify_observers(self, message: str) -> None:
         for observer, auto_update in self._observers.items():
             if auto_update:
-                observer.notification(message=message)
+                print(observer.notification(message=message))
 
     def pull_data(self) -> str:
         return self._data
