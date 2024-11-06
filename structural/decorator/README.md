@@ -2,7 +2,11 @@
 
 The Decorator Pattern dynamically adds additional responsibilities to an object, offering a flexible alternative to subclassing for extending functionality. By using decorators, we can modify behavior at runtime, keeping our designs open for extension and closed for modification, in line with the **Open-Closed Principle**.
 
-![Decorator-Pattern](img_1.png)
+![Decorator-Pattern](img1.png)
+
+## 📘 Definition
+The Decorator Pattern attaches additional responsibilities to an object dynamically.
+Decorators provide a flexible alternative to subclassing for extending functionality.
 
 ### 📝 What We Know About Decorators
 
