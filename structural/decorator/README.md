@@ -54,7 +54,8 @@ The **Open-Closed Principle** dictates that software entities should be **open f
 - **🔒 Closed for Modification**  
   Once a class is tested and proven reliable, modifying it can introduce new bugs. The Open-Closed Principle suggests that, after initial development, classes should remain stable and unmodified. Using decorators, we wrap the original component rather than altering it, preserving its reliability.
 
-When applying OCP, focus on areas likely to change, rather than applying it everywhere, which can lead to complex, hard-to-understand code.
+- **When applying OCP, focus on areas likely to change, rather than applying it everywhere,**
+  **which can lead to complex, hard-to-understand code.**
 
 The benefit of following OCP is a design that adapts to new requirements without disrupting stable code. This makes applications more **resilient to change** and **flexible** for future evolution.
 
